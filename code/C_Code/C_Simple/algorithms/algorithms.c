@@ -78,15 +78,17 @@ int main()
     /*int a[101],n,i;
     printf("how many numbers do you have? \n");
     scanf("%d",&n);
+    //构造快速排序函数
     void quicksort(int left,int right)
     {
-        int i,j,t,temp;
+        int i,j,t,temp;//temp为基准量
         if (left > right)
             return;
         i = left,j = right;
-        temp = a[left];
+        temp = a[left];//最左边的设为基准
         while (j != i)
         {
+            //用i,j找量，j找比基准小的,i找比基准大的
             while (a[j] >= temp && i < j)
                 j--;
             while (a[i] < temp && i < j)
@@ -96,11 +98,12 @@ int main()
                 t = a[i];
                 a[i] = a[j];
                 a[j] = t;
-            }
+            }//将找到的量交换位置
         }
         
         quicksort(left,i-1);
         quicksort(j+1,right);
+        //递归，一分为二
     }
     for (int i = 1;i <= n;i++)
     {
@@ -110,7 +113,7 @@ int main()
     for (i = 1;i <= n;i++)
     {
         printf("%d",a[i]);
-    }*/
+    }*///有bug
 
     //小哼買書
     /*int n,i,j,t;
@@ -130,7 +133,7 @@ int main()
             n = n-(a[t]-1);
             a[t] = 1;
 
-        }
+        }//将重复的去除
     }
     for (i = 0;i <= n;i++)
     {
@@ -141,16 +144,16 @@ int main()
     }*/
 
     //隊列
-    struct queue
+    /*struct queue
     {
         int q[200];
         int head;
         int tail;
-    };
+    };//构造结构体，同时储存
     struct queue q;
     int i;
     q.head = 1;
-    q.tail = 1;
+    q.tail = 1;//初始化
     for (i = 0;i < 9;i++)
     {
         scanf("%d",&q.q[q.tail]);
@@ -158,14 +161,18 @@ int main()
     }
     while (q.head < q.tail )
     {
+        //打印队首
         printf("%d",q.q[q.head]);
         q.head++;
 
+        //将队首的移至队尾
         q.q[q.tail] = q.q[q.head];
         q.head++;
         q.tail++;
-    }
+    }*/
 
+    //栈
+    
     getchar();getchar();
     return 0;
 }

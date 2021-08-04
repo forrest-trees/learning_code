@@ -1,6 +1,7 @@
 #include <stdio.h>
 const int TOTAL = 4;
 float average(int length,int array[]);
+//求平均值
 int main()
 {
     int score[TOTAL];
