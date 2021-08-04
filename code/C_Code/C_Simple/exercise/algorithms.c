@@ -113,7 +113,7 @@ int main()
     }*/
 
     //小哼買書
-    int n,i,j,t;
+    /*int n,i,j,t;
     int a[100];
     printf("how many readers are they: \n");
     scanf("%d",&n);
@@ -138,8 +138,33 @@ int main()
         {
             printf("%d",t);
         }
-    }
+    }*/
 
+    //隊列
+    struct queue
+    {
+        int q[200];
+        int head;
+        int tail;
+    };
+    struct queue q;
+    int i;
+    q.head = 1;
+    q.tail = 1;
+    for (i = 0;i < 9;i++)
+    {
+        scanf("%d",&q.q[q.tail]);
+        q.tail++;
+    }
+    while (q.head < q.tail )
+    {
+        printf("%d",q.q[q.head]);
+        q.head++;
+
+        q.q[q.tail] = q.q[q.head];
+        q.head++;
+        q.tail++;
+    }
 
     getchar();getchar();
     return 0;
