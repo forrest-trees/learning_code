@@ -2,6 +2,8 @@
 
 int main(void)
 {
-    printf("What is your name\n");
+    printf("Hello World.\n");
+    getchar();getchar(); 
+    return 0;
 }
 
